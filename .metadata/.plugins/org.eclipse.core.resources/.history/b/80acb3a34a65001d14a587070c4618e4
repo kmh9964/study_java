@@ -1,0 +1,10 @@
+package com.hanul.variable;
+
+public class Ex01_Variable_main {
+
+	public static void main(String[] args) {
+
+		System.out.println("강미화");
+	}
+
+}

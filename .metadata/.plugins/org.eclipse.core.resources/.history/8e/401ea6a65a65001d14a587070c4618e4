@@ -1,0 +1,20 @@
+package com.hanul.variable;
+
+public class Ex03_char {
+
+	public static void main(String[] args) {
+
+		char ch1 = 'A';//char 타입은 값이 하나만 가능,문자하나여서 작은따옴표로 묶어줘야 됨.
+		System.out.println("ch1 에 저장된 값은 " + ch1 + "입니다");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
