@@ -88,23 +88,23 @@ public class Ex07_if01 {
 		 int busMoney =1250, taxiMoney =4200;
 		 
 		 if(myMoney >= 4200) {
-			System.out.println("택시를 탄다");
-			arrivedTime = 15;
-			myMoney = myMoney-taxiMoney;
+			 System.out.println("택시를 탄다");
+			 arrivedTime = 15;
+			 myMoney = myMoney-taxiMoney;
 		  }else if(myMoney > 1250) {
-				System.out.println("버스를 탄다");
-				arrivedTime = 30;
-				late++;
-				myMoney = myMoney-busMoney;
+			 System.out.println("버스를 탄다");
+			 arrivedTime = 30;
+			 late++;
+			 myMoney = myMoney-busMoney;
 		  }else {	
-			  System.out.println("걸어간다");
-			  arrivedTime = 60;
-			  late++;
+			 System.out.println("걸어간다");
+			 arrivedTime = 60;
+			 late++;
 		  }		
 		 System.out.println(myMoney +"," + arrivedTime + "," + late );
 		
 		 if (late >=12) {		
-			System.out.println("수당 미지급");
+			 System.out.println("수당 미지급");
 		 }else {
 			 System.out.println("수당 지급");
 		 }
@@ -123,6 +123,7 @@ public class Ex07_if01 {
 //			  }	
 //			}
 //			
+	
 		
 		int dadAge = 52, mamAge = 56; 
 		int age;
