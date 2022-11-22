@@ -1,0 +1,49 @@
+package com.hanul.control;
+
+public class Ex08_if02 {
+
+	public static void main(String[] args) {
+
+	//if
+//		int score = 73;
+//		if(score >= 90) {
+//			System.out.println(score + "는 90점 이상");
+//		}else if(score >= 80) {
+//			System.out.println(score + "는 80점 이상");
+//		}else if(score >= 70) {
+//			System.out.println(score + "는 70점 이상");
+//		}else if(score >= 60) {
+//			System.out.println(score + "는 60점 이상");
+//		}else if(score > 60) {
+//			System.out.println(score + "는 60점 미만");
+//		}	
+//			
+		
+		int score = 93;
+		if(score < 60) {
+			System.out.println(score + "는 60점 미만" + " E");
+        }else if(score < 70) {
+			System.out.println(score + "는 70점 미만" + " C");
+		}else if(score < 80) {
+			System.out.println(score + "는 80점 미만" + " B");
+		}else if(score < 90) {
+			System.out.println(score + "는 90점 미만" + " A");
+		}else if(score >= 91) {
+			System.out.println(score + "는 90점 미만" + " A++");
+		}		
+		
+	
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
