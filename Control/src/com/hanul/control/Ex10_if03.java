@@ -30,7 +30,7 @@ public class Ex10_if03 {
 //		int age = sc.nextInt(); 
 //		System.out.println();  // 줄바꿈을 하기 위해 해줌.
 //		
-//		int charge = -100;     // 버스비
+//		int charge = -100;     // 버스비		
 //		String ageGroup = " "; // 연령대
 //		if (age < 8) {
 //			ageGroup = "유아";
@@ -45,6 +45,7 @@ public class Ex10_if03 {
 //			ageGroup = "일반";
 //			charge = 1250;
 //		}	
+//		
 //		System.out.println(age + "살은 "+ ageGroup + "," + charge + "원 입니다.");	
 //		System.out.printf("%s은 %d원 입니다 \n", ageGroup, charge);	
 //	    sc.close();
@@ -53,9 +54,9 @@ public class Ex10_if03 {
 	    //점수가 90점 이상이면 A, 80점 이상이면 B, 70점 이상이면 C ,60점 이상이면 D, 그 외는 F
 	    //이때 학점은 char 타입 변수를 선업한 후 반드시 변수에 학점을 대입하자.
 	    
-	    Scanner sc = new Scanner(System.in);
-		System.out.print("점수를 입력하세요 =>    ");
-		int score = sc.nextInt(); 
+	    Scanner sc1 = new Scanner(System.in);
+	    System.out.print("점수를 입력하세요 =>    ");
+		int score = sc1.nextInt(); 
 		System.out.println();  // 줄바꿈을 하기 위해 해줌.
 		char grade;
 		
@@ -71,12 +72,31 @@ public class Ex10_if03 {
 	    	grade = 'F';
 	    }
 	    System.out.println("학점은 " + grade );	
+	    sc1.close();
 	    
+	    //A나 b이면 상,C나 D이면 중, F이면 하로 출력
+	    char level;
+	    if(grade == 'A'|| grade == 'B') {
+	    	level = '상';
+	    	
+	    }else if (grade == 'C'|| grade == 'D'){
+	         level = '중';
+	    }else {   
+	    	level = '하';
+	    }
+	       System.out.println("나의 레벨은 " + level );	
 	    
-	    
-	    
-	    
-	    
+	    //상위와 같은 내용이지만 if문 안에서 화면 출력 되게 해보자. level 변수 없이 해보자
+	       
+		    if(grade == 'A'|| grade == 'B') {
+		    	System.out.println("나의 레벨은 상");
+		    }else if (grade == 'C'|| grade == 'D'){
+		    	System.out.println('중');
+		    }else {   
+		    	System.out.println('하');
+		    }
+		    
+		    	
 	    
 	    
 	    
