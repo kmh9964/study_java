@@ -1,0 +1,10 @@
+package com.hanul.control;
+
+public class Ex21_SiRoPaWhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
