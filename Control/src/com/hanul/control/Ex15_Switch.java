@@ -39,7 +39,7 @@ public class Ex15_Switch {
 			case 2:
 				System.out.println("은메달");				
 			case 3:
-				System.out.println("동메달");	
+				System.out.println("동메달");	//break;가 없어서 또 실행
 		}
 		
 		switch(no2 % 3) {
