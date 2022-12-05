@@ -11,7 +11,7 @@ public class Ex28_Method05 {
 		//[실습문제]학생들의 성적에 대한 평균과 학점을 출력하는 매소드 선언하여 사용하기
 		
 		int[] parkJumsu = {81, 84, 95,100,85};
-		int[] simJumsu = {96,92,84};
+		int[] simJumsu = {96,92,84,70};
 		int[] hongJumsu = {80,76,82};
 		
 		float avg,avg1,avg2;//평균
@@ -29,12 +29,20 @@ public class Ex28_Method05 {
 	    avg2 = averageOfScore(hongJumsu);
 	    grade2 = gradeOfAverage(avg2);
 	    System.out.printf("홍길동의 평균은 %.2f 이고 학점은 %c 이다\n", avg2 , grade2);
+	    System.out.println();
+	    
+	    printscore(parkJumsu,"박문수");
+	    printscore(simJumsu,"심청");
+	    printscore(hongJumsu,"홍길동");
+	    System.out.println();
+	    
+	    System.out.println("박문수의 인덱스:" + parkJumsu.length);
+	    System.out.println("심청이 "+simJumsu.length);
+	    System.out.println("홍길동"+hongJumsu.length);
 	    
 	    
 	    
 		
-	    printscore(parkJumsu,"박문수");
-	    
 	    
 	}
 

@@ -35,8 +35,6 @@ public class Ex27_Method04 {
 		int sum2 = reSum(no1 , no2);
 		System.out.println("누적합은 " + sum2 );
 		
-//		int sum3 = reReSum(no1 , no2);
-//		System.out.println("누적합은 " + sum3 );
 		
 		
 		
