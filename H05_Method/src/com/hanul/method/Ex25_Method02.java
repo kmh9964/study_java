@@ -39,8 +39,8 @@ public class Ex25_Method02 {
 	}
 	
 	static int multi(int no1, int no2) {//void 대신에 리턴값을 int로 줬기때문에 main 메소드 블럭에 가서 받을때도 int형으로 받아야 된다
-		int mul = no1 * no2;
-		return mul;
+		int mul1 = no1 * no2;
+		return mul1;
 	}
 	
 	
