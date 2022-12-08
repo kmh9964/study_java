@@ -11,9 +11,10 @@ public class Ex38_NumberMain {
 //		System.out.println("전화번호: " + hong.phoneNo);
 //		System.out.println("나이: " + hong.age);
 //		System.out.println("--------------------------" );
+		hong.age=10;
 		hong.changephoneNo("010-9999-7777");
 		hong.changePassWord ("12345@@");
-		hong.changeAge(21);
+		//hong.changeAge(21);
 		printMember(hong.name,hong.id,hong.pW,hong.phoneNo,hong.age);
 	
 		Ex38_Member	sim = new Ex38_Member("심청","sim","1234@@",

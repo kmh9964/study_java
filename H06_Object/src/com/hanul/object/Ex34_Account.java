@@ -55,15 +55,16 @@ public class Ex34_Account {
 		  balance += amount;
 	  }
 	//출금 매소드 : 출금 요청한 금액만큼 잔액을 감소시키고 출금한 금액을 리턴하는 메소드(int형)로 선언	
-	//잔액보다 출금 금액이 많으면 return 0;
-		int withdraw(int amount) {
+	//잔액보다 출금 금액이 많으면 return 0;이 아니라 예외처리한다
+		int withdraw(int amount) throws Exception {//예외처리를 해준것
 			if(balance < amount) {
-				System.out.println("출금 금액보다 잔액이 부족합니다.");
-				return 0; // return이 있으면 그 아래는 실행을 안하고 빨간줄이 나온다.
-			}
+				throw new Exception("출금 금액보다 잔액이 부족합니다.");
+			}	
+				//return 0; // return이 있으면 그 아래는 실행을 안하고 빨간줄이 나온다.
 			balance -= amount;
 			return amount;
-		 
+			
+			
 		}
 		
 }

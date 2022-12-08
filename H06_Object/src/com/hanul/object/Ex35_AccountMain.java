@@ -46,7 +46,12 @@ public class Ex35_AccountMain {
 	    System.out.println();
 	    
 	// 3만원을 출금한 후 예금주, 계좌번호, 잔액을 출력	
-	    account.withdraw(200000);
+	    try {
+			account.withdraw(200000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    printAccount(account.owner,account.accountNo,account.balance);
 	    System.out.printf("%s의 계좌번호는 %s이고, 잔액은 %d 원입니다. \n",account.owner,account.accountNo,account.balance);
 	    System.out.println();
