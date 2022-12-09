@@ -18,7 +18,12 @@ public class Ex58_CheckcardAccountMain {
 		
 				
 		
-		
+		try {
+			int amount = hong.pay("12-12-13", 5000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

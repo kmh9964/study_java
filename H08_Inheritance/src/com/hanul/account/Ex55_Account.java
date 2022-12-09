@@ -1,6 +1,6 @@
 package com.hanul.account;
 
-public class Ex55_Account {
+ public class Ex55_Account {
 
 		// 필드: 계좌번호, 예금주, 잔액
 		// 메소드: 예금한다 메소드, 출금한다 메소드
