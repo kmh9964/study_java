@@ -52,6 +52,7 @@ public class Ex80_PrintWriterMain3 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
+			
 			writer.close();
 		}
 		
