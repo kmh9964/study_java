@@ -1,14 +1,9 @@
 package com.hanul.printwrite;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 public class Ex81_PrintWriterHome {
@@ -28,74 +23,83 @@ public class Ex81_PrintWriterHome {
 		// 3. 문자열 배열변수에 담긴 학생목록을 표의 형식으로 출력되게 
 		//   src/printwrite/list.html 파일로 저장한다.
 		
-		String filename = "studentlist.txt";
-		File dir = new File(filename);
-		if (!dir.exists() || !dir.isDirectory()) {
-			dir.mkdirs();
-		}
+	
 		
-		// readline()이용해서 한줄씩 읽어오기
+		// 변수 선언
 		BufferedReader in = null;
-		
+		//10명 저장할 배열 변수 선언
+		String[] studentInfo = new String[10];
+		//BufferedReader 클래스를 사용해서 studentlist.txt의 문자열 읽어오기
+		String filename = "studentlist.txt";
 		try {
 			in = new BufferedReader(new FileReader(filename));
-			String data;
+			String data;//readline()으로 읽어온 값을 넣을 변수 선언
+			int i=0;
+			// readline()이용해서 한줄씩 읽어온 값이 null이 아니라면 data 변수에 넣고 반복해서 실행해라
 			while((data = in.readLine()) !=null) {
+			    studentInfo[i] = data;//data의 값을 다시 studentInfo[i]배열에 넣어라
+			    i++;
 				System.out.println(data);
-				String[] studentarr = data.split(",");
+				
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}finally {
 			try {
 				in.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} catch (Exception e) {
+				
 				e.printStackTrace();
 			}
 		}
 		System.out.println("읽기 끝");
 		
-		
-		
-		// src/printwrite/list.html 파일로 저장하기
-		File dir1 = new File("src/printwrite");
-		if (!dir1.exists() || !dir1.isDirectory()) {
-			dir1.mkdirs();
+		//src/printwrite/list.html 파일로 저장하기		
+		File dir = new File("src/printwrite");
+		//exists()파일이 존재하는지 체크,isDirectory()디렉토리인지 체크,mkdirs()디렉토리를 만들어라
+		if (!dir.exists() || !dir.isDirectory()) {
+			dir.mkdirs();
 		}
+		
 		PrintWriter writer = null;
 		try {
-			writer = new PrintWriter(dir1 + "/" + "studentlist.html");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			writer = new PrintWriter(dir + "/" + "list.html");
+			writer.println("<html>");
+			writer.println("<body>");
+			writer.println("<h1>학생 명단</h1>");
+			writer.println("<table border='1'>");
+			writer.println("<tr><th>이름</th><th>성별</th><th>연락처</th><th>이메일</th></tr>");
+			//향상된 for문 사용
+			for(String str : studentInfo)	{
+			String[] printData= str.split(",");
+			
+		     writer.printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n"
+						, printData[0], printData[1], printData[2], printData[3]);
+		    
+			}
+			 writer.println("</table>");
+		     writer.println("</body>");
+		     writer.println("</html>");
+			
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				
+				writer.flush();
+				writer.close();
+				System.out.println("list.html 만들기 끝");
+				
+			}
+			 
+			 
+	}				
+		
 		}
-		writer.println("<html>");
-		writer.println("<body>");
-		writer.println("<h1>학생 명단</h1>");
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-	}
-	
+			
 	
 	
 
-}
+
